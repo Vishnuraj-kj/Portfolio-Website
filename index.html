@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishnuraj KJ — Senior UI/UX Designer</title>
+    <meta name="description" content="Senior UI/UX Designer & Product Designer with 5+ years of experience designing web, mobile, SaaS, enterprise, and AI-powered products.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===================== PAGE LOADER ===================== -->
+  <div id="page-loader" class="page-loader" aria-hidden="true">
+    <div class="pl-inner">
+      <!-- Real logo -->
+      <div class="pl-logo">
+        <img src="ui design/logo-vj.png" alt="VJ" class="pl-logo-img" />
+      </div>
+      <!-- Progress bar -->
+      <div class="pl-bar-track">
+        <div class="pl-bar-fill" id="pl-bar-fill"></div>
+      </div>
+      <p class="pl-label">Loading</p>
+    </div>
+  </div>
+    <!-- Custom cursor -->
+    <div class="cursor">
+        <div class="outer"></div>
+        <div class="inner"></div>
+        <span class="cursor-label"></span>
+    </div>
+
+    <!-- Animated Background Blobs -->
+    <div class="blob blob-3"></div>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <nav class="navbar">
+        <div class="nav-inner">
+            <!-- Logo icon -->
+            <div class="nav-logo">
+                <div class="nav-logo-icon">
+                    <img src="ui design/logo-vj.png" alt="VJ" class="nav-logo-img" />
+                </div>
+            </div>
+
+            <!-- Center nav links -->
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#work">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <!-- Right: Resume button -->
+            <div class="nav-right">
+                <a href="ui design/Vishnuraj_KJ_CV_2026.pdf" download="Vishnuraj_KJ_CV_2026.pdf" class="nav-resume-btn">
+                    Resume
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                </a>
+            </div>
+
+            <!-- Mobile hamburger -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===================== HERO ===================== -->
+    <section id="home" class="hero-section">
+
+        <!-- Noise grain overlay -->
+        <div class="hero-noise" aria-hidden="true"></div>
+
+        <!-- ── COL 1 — LEFT: Greeting + Specialisms ── -->
+        <div class="hero-col hero-col--left">
+
+            <!-- Greeting block (top-left) -->
+            <div class="hero-greeting-block">
+                <p class="hero-hello">Hello there</p>
+                <p class="hero-welcome"><em>(Welcome)</em></p>
+            </div>
+             <!-- Availability badge — sits above photo frame -->
+            <div class="hero-avail" style="width: fit-content;">
+                <span class="avail-dot"></span>
+                <span>Available for work</span>
+            </div>
+            <!-- Specialisms list (bottom-left) -->
+            <ul class="hero-spec-list">
+                <li>Product Design, UI/UX</li>
+                <li>Design Systems</li>
+                <li>AI-Assisted Design</li>
+            </ul>
+
+           
+
+        </div>
+
+        <!-- ── COL 2 — CENTER: Avail badge + Photo + Scroll hint ── -->
+        <div class="hero-col hero-col--center">
+
+           
+             
+
+            <div class="hero-photo-frame">
+                <img src="ui design/Banner-bg.jpg" alt="Vishnuraj KJ — Senior UI/UX Designer" class="hero-photo" />
+            </div>
+
+            <!-- CTA row -->
+            <div class="hero-cta-row">
+                <a href="#work" class="hero-cta-primary">View Work
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <a href="#contact" class="hero-cta-ghost">Get in touch</a>
+            </div>
+
+            <!-- Scroll indicator below photo -->
+            <!-- <div class="hero-scroll-hint">
+                <span class="scroll-label">scroll</span>
+                <div class="scroll-line"></div>
+                <svg class="scroll-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 1v12M1 7l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div> -->
+
+        </div>
+
+        <!-- ── COL 3 — RIGHT: Descriptor + Name ── -->
+        <div class="hero-col hero-col--right">
+
+            <!-- Descriptor (top-right, right-aligned) -->
+            <p class="hero-descriptor">
+                I design things that feel<br>
+                <em>sharp, thoughtful,</em><br>
+                and a little unexpected.
+            </p>
+
+            <!-- Name block (bottom-right) -->
+            <div class="hero-name-block">
+                <p class="hero-im">I'm</p>
+                <h1 class="hero-name">
+                    <span class="hn-line" data-line="0">VISHNU</span>
+                    <span class="hn-line" data-line="1">RAJ</span>
+                    <span class="hn-line" data-line="2">KJ</span>
+                </h1>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ── MARQUEE STRIP — outside hero so overflow:hidden never clips it ── -->
+    <div class="hero-marquee-strip" aria-hidden="true">
+        <div class="marquee-track">
+            <span>Product Design</span><span class="msep">◆</span>
+            <span>UI/UX</span><span class="msep">◆</span>
+            <span>Design Systems</span><span class="msep">◆</span>
+            <span>Figma</span><span class="msep">◆</span>
+            <span>AI-Assisted Design</span><span class="msep">◆</span>
+            <span>User Research</span><span class="msep">◆</span>
+            <span>Prototyping</span><span class="msep">◆</span>
+            <span>Interaction Design</span><span class="msep">◆</span>
+            <span>SaaS</span><span class="msep">◆</span>
+            <span>Mobile &amp; Web</span><span class="msep">◆</span>
+            <!-- duplicate for seamless loop -->
+            <span>Product Design</span><span class="msep">◆</span>
+            <span>UI/UX</span><span class="msep">◆</span>
+            <span>Design Systems</span><span class="msep">◆</span>
+            <span>Figma</span><span class="msep">◆</span>
+            <span>AI-Assisted Design</span><span class="msep">◆</span>
+            <span>User Research</span><span class="msep">◆</span>
+            <span>Prototyping</span><span class="msep">◆</span>
+            <span>Interaction Design</span><span class="msep">◆</span>
+            <span>SaaS</span><span class="msep">◆</span>
+            <span>Mobile &amp; Web</span><span class="msep">◆</span>
+        </div>
+    </div>
+
+
+    <!-- ===================== ABOUT / QUOTE SECTION ===================== -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-container">
+                <p id="about-text" class="about-text">A Senior UI/UX Designer from Kochi, constantly experimenting, questioning, and figuring things out — one pixel at a time.</p>
+                <a href="about.html" class="about-cta-btn">
+                    More About Me
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section id="work" class="projects">
+        <div class="container">
+            <div class="projects-header">
+                <h2 class="projects-title">Selected Work</h2>
+                <p class="projects-subtitle">Real products, real problems, real outcomes</p>
+            </div>
+
+            <div class="projects-grid">
+
+                <!-- Hotel Booking -->
+                <a href="project-detail.html?id=hotel-booking" class="work-card">
+                    <div class="work-card-preview wcp-blue">
+                        <div class="wcp-label-chip">Hospitality · Travel</div>
+                        <img
+                            src="projects/Hotel Booking (Case study)  4.jpg.jpeg"
+                            alt="Hotel Booking case study"
+                            class="wcp-photo"
+                           
+                        />
+                    </div>
+                    <div class="work-card-info">
+                        <h3 class="work-card-title">HOTEL BOOKING</h3>
+                        <p class="work-card-desc">End-to-end hotel booking experience — user research, journey mapping, information architecture, and high-fidelity UI design for a seamless travel booking flow.</p>
+                        <div class="work-card-tags">
+                            <span class="wc-tag">UI/UX</span>
+                            <span class="wc-tag">UX Research</span>
+                            <span class="wc-tag">Mobile</span>
+                            <span class="wc-tag">Case Study</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Ovia -->
+                <a href="project-detail.html?id=ovia" class="work-card">
+                    <div class="work-card-preview wcp-green">
+                        <div class="wcp-label-chip">Health · Wellness</div>
+                        <img
+                            src="projects/Ovia.jpg.jpeg"
+                            alt="Ovia health product design"
+                            class="wcp-photo"
+            
+                        />
+                    </div>
+                    <div class="work-card-info">
+                        <h3 class="work-card-title">OVIA</h3>
+                        <p class="work-card-desc">Health and wellness product design — intuitive onboarding, personalised dashboards, and a clean visual language that puts user wellbeing first.</p>
+                        <div class="work-card-tags">
+                            <span class="wc-tag">Product Design</span>
+                            <span class="wc-tag">UI/UX</span>
+                            <span class="wc-tag">Mobile</span>
+                            <span class="wc-tag">Health Tech</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Pemmin Task -->
+                <a href="project-detail.html?id=pemmin" class="work-card">
+                    <div class="work-card-preview wcp-purple">
+                        <div class="wcp-label-chip">Productivity · SaaS</div>
+                        <img
+                            src="projects/Pemmin_Task.jpg.jpeg"
+                            alt="Pemmin task management SaaS"
+                            class="wcp-photo"
+            
+                        />
+                    </div>
+                    <div class="work-card-info">
+                        <h3 class="work-card-title">PEMMIN TASK</h3>
+                        <p class="work-card-desc">Task and project management SaaS — designed for teams that need clarity. Clean dashboards, smart workflows, and a design system built for scale.</p>
+                        <div class="work-card-tags">
+                            <span class="wc-tag">Dashboard</span>
+                            <span class="wc-tag">UI/UX</span>
+                            <span class="wc-tag">SaaS</span>
+                            <span class="wc-tag">Productivity</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- SKS Website -->
+                <a href="project-detail.html?id=sks-website" class="work-card">
+                    <div class="work-card-preview wcp-orange">
+                        <div class="wcp-label-chip">Corporate · Branding</div>
+                        <img
+                            src="projects/SKS WEBSITE JPEG(3 SLIDE).jpg.jpeg"
+                            alt="SKS corporate website design"
+                            class="wcp-photo"
+            
+                        />
+                    </div>
+                    <div class="work-card-info">
+                        <h3 class="work-card-title">SKS WEBSITE</h3>
+                        <p class="work-card-desc">Corporate website redesign with a strong visual identity — modern layout system, brand-consistent design language, and conversion-optimised page structures.</p>
+                        <div class="work-card-tags">
+                            <span class="wc-tag">Web Design</span>
+                            <span class="wc-tag">Branding</span>
+                            <span class="wc-tag">UI/UX</span>
+                            <span class="wc-tag">Corporate</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Web 1920 — I -->
+                <a href="project-detail.html?id=web-1920-v1" class="work-card">
+                    <div class="work-card-preview wcp-teal">
+                        <div class="wcp-label-chip">Web · UI Design</div>
+                        <img
+                            src="projects/Web 1920  1.jpg.jpeg"
+                            alt="Web 1920 UI design — version 1"
+                            class="wcp-photo"
+            
+                        />
+                    </div>
+                    <div class="work-card-info">
+                        <h3 class="work-card-title">WEB 1920 — I</h3>
+                        <p class="work-card-desc">Full-scale web UI design at 1920px — bold layout composition, strong visual hierarchy, and a refined design system for a modern digital experience.</p>
+                        <div class="work-card-tags">
+                            <span class="wc-tag">UI Design</span>
+                            <span class="wc-tag">Web</span>
+                            <span class="wc-tag">Responsive</span>
+                            <span class="wc-tag">Visual Design</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Web 1920 — II -->
+                <a href="project-detail.html?id=web-1920-v2" class="work-card">
+                    <div class="work-card-preview wcp-pink">
+                        <div class="wcp-label-chip">Web · UI Design</div>
+                        <img
+                            src="projects/Web 1920  2.jpg.jpeg"
+                            alt="Web 1920 UI design — version 2"
+                            class="wcp-photo"
+            
+                        />
+                    </div>
+                    <div class="work-card-info">
+                        <h3 class="work-card-title">WEB 1920 — II</h3>
+                        <p class="work-card-desc">Continuation of the Web 1920 series — deeper interaction design, refined motion principles, and a more sophisticated visual language for digital interfaces.</p>
+                        <div class="work-card-tags">
+                            <span class="wc-tag">UI Design</span>
+                            <span class="wc-tag">Web</span>
+                            <span class="wc-tag">Interaction</span>
+                            <span class="wc-tag">Visual Design</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Hotel Booking II -->
+                <a href="project-detail.html?id=hotel-booking-2" class="work-card">
+                    <div class="work-card-preview wcp-blue">
+                        <div class="wcp-label-chip">Hospitality · Travel</div>
+                        <img
+                            src="projects/Hotel Booking (Case study) 4.png"
+                            alt="Hotel Booking visual design iteration"
+                            class="wcp-photo"
+            
+                        />
+                    </div>
+                    <div class="work-card-info">
+                        <h3 class="work-card-title">HOTEL BOOKING — II</h3>
+                        <p class="work-card-desc">High-fidelity visual design iteration for the hotel booking platform — refined UI components, updated colour system, and polished responsive layouts.</p>
+                        <div class="work-card-tags">
+                            <span class="wc-tag">Visual Design</span>
+                            <span class="wc-tag">UI/UX</span>
+                            <span class="wc-tag">Responsive</span>
+                            <span class="wc-tag">Travel</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===================== SKILLS ===================== -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="skills-layout">
+                <div class="skills-header-col">
+                    <p class="skills-eyebrow">// expertise</p>
+                    <h2 class="skills-title">What I<br>bring to<br>the table</h2>
+                    <p class="skills-tagline">5+ years shaping digital products across B2B, B2C, SaaS, and AI domains.</p>
+                </div>
+                <div class="skills-body-col">
+                    <div class="skill-group">
+                        <div class="skill-group-header">
+                            <span class="skill-group-icon">◈</span>
+                            <span class="skill-group-label">UX / Research</span>
+                        </div>
+                        <div class="skill-chips">
+                            <span class="chip">User Research</span>
+                            <span class="chip">User Interviews</span>
+                            <span class="chip">Usability Testing</span>
+                            <span class="chip">Information Architecture</span>
+                            <span class="chip">User Journey Mapping</span>
+                            <span class="chip">Heuristic Evaluation</span>
+                            <span class="chip">Personas</span>
+                            <span class="chip">Task Flows</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-group-header">
+                            <span class="skill-group-icon">◉</span>
+                            <span class="skill-group-label">UI / Design</span>
+                        </div>
+                        <div class="skill-chips">
+                            <span class="chip">Wireframing</span>
+                            <span class="chip">Prototyping</span>
+                            <span class="chip">Interaction Design</span>
+                            <span class="chip">Design Systems</span>
+                            <span class="chip">Component Libraries</span>
+                            <span class="chip">Responsive Design</span>
+                            <span class="chip">Visual Hierarchy</span>
+                            <span class="chip">Accessibility (WCAG)</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-group-header">
+                            <span class="skill-group-icon">◇</span>
+                            <span class="skill-group-label">Product & Collab</span>
+                        </div>
+                        <div class="skill-chips">
+                            <span class="chip">Product Thinking</span>
+                            <span class="chip">Design Thinking</span>
+                            <span class="chip">Stakeholder Management</span>
+                            <span class="chip">Agile</span>
+                            <span class="chip">Developer Handoff</span>
+                            <span class="chip">Cross-Functional Collab</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-group-header">
+                            <span class="skill-group-icon">◆</span>
+                            <span class="skill-group-label">AI & Tools</span>
+                        </div>
+                        <div class="skill-chips">
+                            <span class="chip chip-ai">AI-Assisted Design</span>
+                            <span class="chip chip-ai">Prompt Engineering</span>
+                            <span class="chip chip-ai">ChatGPT</span>
+                            <span class="chip chip-ai">Claude</span>
+                            <span class="chip chip-ai">UX Pilot</span>
+                            <span class="chip chip-ai">Figma Make</span>
+                            <span class="chip">Figma</span>
+                            <span class="chip">Adobe XD</span>
+                            <span class="chip">Sketch</span>
+                            <span class="chip">Photoshop</span>
+                            <span class="chip">Illustrator</span>
+                            <span class="chip">InVision</span>
+                            <span class="chip">Framer</span>
+                            <span class="chip">Miro</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== EXPERIENCE ===================== -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="exp-section-header">
+                <p class="exp-eyebrow">// career</p>
+                <h2 class="exp-section-title">Experience</h2>
+            </div>
+            <div class="experience-timeline">
+                <!-- Vertical progress line -->
+                <div class="timeline-track">
+                    <div class="timeline-line-bg"></div>
+                    <div class="timeline-line-fill" id="timelineFill"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot-wrap">
+                        <div class="timeline-dot active"></div>
+                    </div>
+                    <div class="timeline-content" data-cursor-label="20+ Projects · SaaS & AI">
+                        <div class="timeline-meta">
+                            <span class="timeline-company">Alignminds Technologies</span>
+                            <span class="timeline-date">Oct 2022 – Present</span>
+                            <span class="exp-badge current">Current</span>
+                        </div>
+                        <h3 class="timeline-role">Senior UI/UX Designer</h3>
+                        <p class="timeline-desc">Led design for 20+ web and mobile apps including SaaS and enterprise platforms. Established design systems, drove UX research, and leveraged AI-assisted workflows.</p>
+                        <div class="timeline-tags">
+                            <span class="t-tag">SaaS</span>
+                            <span class="t-tag">Enterprise</span>
+                            <span class="t-tag">Design Systems</span>
+                            <span class="t-tag">AI Workflows</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot-wrap">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content" data-cursor-label="C2C · Product Design">
+                        <div class="timeline-meta">
+                            <span class="timeline-company">Marc Opportunity Development Ltd</span>
+                            <span class="timeline-date">Jul 2021 – Sep 2022</span>
+                        </div>
+                        <h3 class="timeline-role">UI/UX Designer · Product Designer</h3>
+                        <p class="timeline-desc">End-to-end UX research and design for MARC C2C platform and Asset Management software. Developed information architecture and B2C e-commerce application flows.</p>
+                        <div class="timeline-tags">
+                            <span class="t-tag">C2C Platform</span>
+                            <span class="t-tag">B2C</span>
+                            <span class="t-tag">IA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot-wrap">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content" data-cursor-label="UI/UX · Branding">
+                        <div class="timeline-meta">
+                            <span class="timeline-company">Branding Beez</span>
+                            <span class="timeline-date">Apr 2020 – Jun 2021</span>
+                        </div>
+                        <h3 class="timeline-role">UI/UX & Graphic Designer</h3>
+                        <p class="timeline-desc">Delivered UI/UX solutions for 10+ client projects. Redesigned applications and websites, and created branding assets including logos, social media creatives, and packaging.</p>
+                        <div class="timeline-tags">
+                            <span class="t-tag">UI/UX</span>
+                            <span class="t-tag">Branding</span>
+                            <span class="t-tag">Graphic Design</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== EDUCATION ===================== -->
+    <section id="education" class="education">
+        <div class="container">
+            <div class="edu-section-header">
+                <p class="edu-eyebrow">// education</p>
+                <h2 class="edu-section-title">Education</h2>
+            </div>
+
+            <div class="education-grid">
+
+                <div class="edu-card fade-in">
+                    <div class="edu-card-accent accent-purple"></div>
+                    <div class="edu-card-body">
+                        <div class="edu-card-meta">
+                            <span class="edu-date">2019 – 2020</span>
+                            <span class="edu-badge">Design</span>
+                        </div>
+                        <h3 class="edu-degree">Diploma in UI/UX Design</h3>
+                        <p class="edu-institution">Asian Institute of Design, Bangalore</p>
+                        <p class="edu-desc">Comprehensive training in User Experience and User Interface Design principles. Hands-on experience in user research, wireframing, prototyping, information architecture, and usability testing. Specialized in industry-standard tools including Figma and Adobe XD.</p>
+                        <div class="edu-tags">
+                            <span class="t-tag">UX Design</span>
+                            <span class="t-tag">UI Design</span>
+                            <span class="t-tag">Prototyping</span>
+                            <span class="t-tag">Figma</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="edu-card fade-in">
+                    <div class="edu-card-accent accent-blue"></div>
+                    <div class="edu-card-body">
+                        <div class="edu-card-meta">
+                            <span class="edu-date">2016 – 2019</span>
+                            <span class="edu-badge">Technology</span>
+                        </div>
+                        <h3 class="edu-degree">Bachelor of Computer Applications</h3>
+                        <p class="edu-institution">St. Mary's College, Sulthan Bathery</p>
+                        <p class="edu-desc">Core subjects in software engineering, database systems, networking, and application development methodologies. Developed logical thinking and problem-solving abilities through hands-on programming and team projects.</p>
+                        <div class="edu-tags">
+                            <span class="t-tag">Software Engineering</span>
+                            <span class="t-tag">Databases</span>
+                            <span class="t-tag">Networking</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="faq-layout">
+                <div class="faq-header-col">
+                    <p class="faq-eyebrow">// questions</p>
+                    <h2 class="faq-title">Things<br>people<br>ask me</h2>
+                </div>
+                <div class="faq-list-col">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-q-inner">
+                                <span class="faq-num">01</span>
+                                <h3>What's your design process like?</h3>
+                            </div>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer"><p>I follow a user-centered approach: Research & Discovery → Information Architecture → Wireframing → Visual Design → Prototyping → Testing & Iteration. I involve stakeholders and users throughout to make sure we're solving the right problems.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-q-inner">
+                                <span class="faq-num">02</span>
+                                <h3>Do you work with development teams?</h3>
+                            </div>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer"><p>Absolutely. I have extensive experience collaborating with engineering and QA teams. I provide detailed specs, style guides, and stay involved through development to ensure the final product matches the design intent.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-q-inner">
+                                <span class="faq-num">03</span>
+                                <h3>What tools do you use?</h3>
+                            </div>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer"><p>Primarily Figma and FigJam for UI/UX and collaboration. Adobe Photoshop and Illustrator for visual design. I also use AI tools like ChatGPT, Claude, and UX Pilot to accelerate research and ideation, plus Framer and InVision for advanced prototyping.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-q-inner">
+                                <span class="faq-num">04</span>
+                                <h3>Have you worked on AI-powered products?</h3>
+                            </div>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer"><p>Yes — AutoVista is a great example. I've also integrated AI-assisted design workflows into my day-to-day process: using tools like UX Pilot and Figma Make for faster iteration, and AI-driven research techniques to generate richer UX insights.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-q-inner">
+                                <span class="faq-num">05</span>
+                                <h3>How long does a typical project take?</h3>
+                            </div>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer"><p>It depends on scope. A focused feature design can take 2–3 weeks. A full product with discovery, research, and testing typically runs 8–12 weeks. I always provide a clear timeline with deliverables before we start.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-q-inner">
+                                <span class="faq-num">06</span>
+                                <h3>Are you available for freelance projects?</h3>
+                            </div>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer"><p>Yes, I take on select freelance projects alongside my full-time work. If you have something interesting, reach out at vishnurajkj001@gmail.com and let's talk.</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer id="contact" class="footer">
+
+        <!-- Dot-grid texture overlay -->
+        <div class="footer-dots"></div>
+
+        <div class="footer-inner">
+
+            <!-- Profile photo centered at top -->
+            <div class="footer-avatar-wrap">
+                <img src="ui design/Banner-bg.jpg" alt="Vishnuraj KJ" class="footer-avatar" />
+            </div>
+
+            <!-- Big headline -->
+            <div class="footer-headline">
+                <span class="footer-hl-bold">got a product to build?&nbsp; a design to fix?</span>
+                <span class="footer-hl-italic">let's make something worth using.</span>
+            </div>
+
+            <!-- Sub copy -->
+            <p class="footer-sub">
+                Open to full-time roles, freelance projects,<br>
+                and thoughtful design conversations.
+            </p>
+
+            <!-- Email CTA -->
+            <a href="mailto:vishnurajkj001@gmail.com" class="footer-email">
+                vishnurajkj001@gmail.com
+            </a>
+
+            <!-- Social links -->
+            <nav class="footer-socials">
+                <a href="https://www.linkedin.com/in/vishnuraj-k-j-28051b1a0" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <span class="footer-social-sep">|</span>
+                <a href="https://behance.net/vishnurajkj" target="_blank" rel="noopener noreferrer">Behance</a>
+                <span class="footer-social-sep">|</span>
+                <a href="mailto:vishnurajkj001@gmail.com">Mail</a>
+                <span class="footer-social-sep">|</span>
+                <a href="https://www.linkedin.com/in/vishnuraj-k-j-28051b1a0" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </nav>
+
+            <!-- Bottom bar -->
+            <div class="footer-bar">
+                <p>&copy; Vishnuraj KJ  2026 ALL RIGHTS RESERVED</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <span class="btt-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="19" x2="12" y2="5"></line>
+                <polyline points="5 12 12 5 19 12"></polyline>
+            </svg>
+        </span>
+        <span class="btt-label">TOP</span>
+        <span class="btt-line"></span>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
