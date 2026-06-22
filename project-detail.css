@@ -1,0 +1,655 @@
+/* ============================================================
+   project-detail.css
+   Styles for the dynamic project detail page.
+   Inherits variables, resets, navbar, footer, and buttons
+   from styles.css — only page-specific rules live here.
+   ============================================================ */
+
+/* ---- Loading state ---- */
+/*
+ * All three states (loading / error / content) are controlled
+ * exclusively via display:none / display:block — never the `hidden`
+ * attribute alone, because a CSS `display` rule always wins over it.
+ */
+.detail-loading {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail-loading.is-hidden,
+.detail-error.is-hidden,
+.detail-content-wrap.is-hidden {
+  display: none !important;
+}
+
+.detail-loading-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.detail-loading-inner p {
+  font-family: var(--font-primary);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.detail-spinner {
+  width: 32px;
+  height: 32px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-top-color: rgba(59, 130, 246, 0.8);
+  border-radius: 50%;
+  animation: spin 0.75s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ---- Error state ---- */
+/* Starts hidden — shown only when no project matches */
+.detail-error {
+  display: none;
+  min-height: 100vh;
+  align-items: center;
+  padding-top: 80px;
+}
+
+.detail-error.is-visible {
+  display: flex;
+}
+
+.detail-error .container {
+  text-align: center;
+}
+
+.detail-error-code {
+  font-family: var(--font-primary);
+  font-size: clamp(5rem, 15vw, 10rem);
+  font-weight: 700;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.05);
+  margin-bottom: 1rem;
+  letter-spacing: -0.05em;
+}
+
+.detail-error-title {
+  font-family: var(--font-primary);
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.detail-error-sub {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+}
+
+.detail-back-btn {
+  display: inline-flex;
+}
+
+/* ---- Root wrapper ---- */
+.detail-root {
+  padding-top: 80px; /* navbar offset */
+}
+
+/* Override the global .container on the detail page —
+   use near-full width with only small side gutters */
+.detail-root .container {
+  max-width: 100%;
+  padding: 0 2rem;
+}
+
+/* ====================================================
+   HERO BAND
+   ==================================================== */
+.pd-hero {
+  padding: 4rem 0 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Breadcrumb */
+.pd-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.pd-bc-link {
+  font-family: var(--font-primary);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.pd-bc-link:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.pd-bc-sep {
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.15);
+}
+
+.pd-bc-current {
+  font-family: var(--font-primary);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* Chip */
+.pd-chip {
+  display: inline-block;
+  font-family: var(--font-primary);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50px;
+  padding: 0.3rem 0.9rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Title */
+.pd-title {
+  font-family: var(--font-primary);
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.75rem;
+}
+
+.pd-subtitle {
+  font-family: var(--font-primary);
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
+  color: var(--text-secondary);
+  font-style: italic;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+  max-width: 520px;
+  margin-bottom: 0;
+}
+
+/* Meta pills row */
+.pd-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.pd-meta-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 50px;
+}
+
+.pd-meta-label {
+  font-family: var(--font-primary);
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.pd-meta-value {
+  font-family: var(--font-primary);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+/* ====================================================
+   PROJECT IMAGE
+   ==================================================== */
+.pd-image-section {
+  padding: 0 0 5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.pd-image-frame {
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
+  line-height: 0; /* remove inline gap below img */
+}
+
+.pd-hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: unset;
+  object-position: unset;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pd-image-frame:hover .pd-hero-img {
+  /* No scale on full-height images — it clips content */
+  transform: none;
+}
+
+/* ====================================================
+   BODY — Overview + Process
+   ==================================================== */
+.pd-body {
+  padding: 0 0 6rem;
+  position: relative;
+  z-index: 1;
+}
+
+.pd-body-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+/* Eyebrow labels */
+.pd-section-eyebrow {
+  font-family: var(--font-primary);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-blue);
+  opacity: 0.75;
+  margin-bottom: 1rem;
+}
+
+/* Overview column */
+.pd-overview-col {
+  position: sticky;
+  top: 110px;
+}
+
+.pd-overview-text {
+  font-family: var(--font-primary);
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+}
+
+.pd-tags-group {
+  margin-top: 0.5rem;
+}
+
+.pd-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.25rem;
+}
+
+.pd-tag {
+  font-family: var(--font-primary);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+  padding: 0.28rem 0.72rem;
+  white-space: nowrap;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.pd-tag:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Process column */
+.pd-process-col {
+  /* not sticky — scrolls naturally */
+}
+
+.pd-process-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  counter-reset: process-counter;
+}
+
+.pd-process-item {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem 1.75rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  transition: background 0.25s ease, border-color 0.25s ease;
+  counter-increment: process-counter;
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+
+.pd-process-item:last-child {
+  margin-bottom: 0;
+}
+
+.pd-process-item:hover {
+  background: rgba(255, 255, 255, 0.055);
+  border-color: rgba(255, 255, 255, 0.13);
+}
+
+.pd-process-num {
+  font-family: var(--font-primary);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.2);
+  flex-shrink: 0;
+  min-width: 1.8rem;
+  padding-top: 0.15rem;
+  transition: color 0.25s ease;
+}
+
+.pd-process-item:hover .pd-process-num {
+  color: var(--accent-blue);
+}
+
+.pd-process-body {
+  flex: 1;
+}
+
+.pd-process-phase {
+  font-family: var(--font-primary);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+  margin-bottom: 0.4rem;
+}
+
+.pd-process-detail {
+  font-family: var(--font-primary);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+/* ====================================================
+   CTA SECTION
+   ==================================================== */
+.pd-cta-section {
+  padding: 0 0 6rem;
+  position: relative;
+  z-index: 1;
+}
+
+.pd-cta-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 5rem 2rem;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle radial glow behind CTA */
+.pd-cta-inner::before {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  background: radial-gradient(ellipse, rgba(59, 130, 246, 0.12) 0%, transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.pd-cta-label {
+  font-family: var(--font-primary);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-blue);
+  opacity: 0.8;
+  margin-bottom: 0.75rem;
+  position: relative;
+}
+
+.pd-cta-title {
+  font-family: var(--font-primary);
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.pd-cta-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+}
+
+/* Know More button — slightly larger + Behance accent */
+.pd-know-more-btn {
+  background: #ffffff;
+  color: #0a0a0a;
+  padding: 1rem 2.25rem;
+  font-size: 0.8rem;
+  gap: 0.6rem;
+}
+
+.pd-know-more-btn:hover {
+  background: #e8e8e8;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(255, 255, 255, 0.18);
+}
+
+/* ====================================================
+   PROJECT NAVIGATION (prev / next)
+   ==================================================== */
+.pd-nav-section {
+  padding: 0 0 5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.pd-proj-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.pd-nav-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding: 1.5rem 1.75rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.pd-nav-card:hover {
+  background: rgba(255, 255, 255, 0.055);
+  border-color: rgba(255, 255, 255, 0.14);
+  transform: translateY(-3px);
+}
+
+.pd-nav-card.pd-nav-prev {
+  text-align: left;
+}
+
+.pd-nav-card.pd-nav-next {
+  text-align: right;
+}
+
+.pd-nav-direction {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-primary);
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: rgba(255, 255, 255, 0.25);
+  margin-bottom: 0.5rem;
+}
+
+.pd-nav-card.pd-nav-next .pd-nav-direction {
+  justify-content: flex-end;
+}
+
+.pd-nav-project-title {
+  font-family: var(--font-primary);
+  font-size: clamp(0.9rem, 2vw, 1.15rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+/* ====================================================
+   RESPONSIVE
+   ==================================================== */
+@media (max-width: 900px) {
+  .detail-root .container {
+    padding: 0 1.25rem;
+  }
+
+  .pd-body-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .pd-overview-col {
+    position: static;
+  }
+
+  .pd-proj-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .pd-nav-card.pd-nav-next {
+    text-align: left;
+  }
+
+  .pd-nav-card.pd-nav-next .pd-nav-direction {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .pd-hero {
+    padding: 3rem 0 2rem;
+  }
+
+  .pd-title {
+    font-size: clamp(2rem, 10vw, 3.5rem);
+  }
+
+  .pd-image-section {
+    padding: 0 0 3.5rem;
+  }
+
+  .pd-image-frame {
+    border-radius: 14px;
+  }
+
+  .pd-body {
+    padding: 0 0 4rem;
+  }
+
+  .pd-cta-inner {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .pd-cta-actions {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .pd-know-more-btn,
+  .pd-cta-actions .btn-secondary {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .detail-root .container {
+    padding: 0 0.75rem;
+  }
+
+  .pd-title {
+    font-size: clamp(1.75rem, 11vw, 2.8rem);
+  }
+
+  .pd-meta-row {
+    gap: 0.5rem;
+  }
+
+  .pd-meta-pill {
+    padding: 0.4rem 0.8rem;
+  }
+
+  .pd-process-item {
+    padding: 1.2rem 1.25rem;
+    gap: 1rem;
+  }
+
+  .pd-proj-nav {
+    gap: 1rem;
+  }
+
+  .pd-nav-card {
+    padding: 1.2rem 1.25rem;
+  }
+}

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project — Vishnuraj KJ</title>
+  <meta name="description" content="Project detail — Vishnuraj KJ, Senior UI/UX Designer" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="project-detail.css" />
+</head>
+<body>
+
+  <!-- ===================== PAGE LOADER ===================== -->
+  <div id="page-loader" class="page-loader" aria-hidden="true">
+    <div class="pl-inner">
+      <div class="pl-logo">
+        <img src="ui design/logo-vj.png" alt="VJ" class="pl-logo-img" />
+      </div>
+      <div class="pl-bar-track">
+        <div class="pl-bar-fill" id="pl-bar-fill"></div>
+      </div>
+      <p class="pl-label">Loading</p>
+    </div>
+  </div>
+
+  <!-- Custom cursor (same as index) -->
+  <div class="cursor">
+    <div class="outer"></div>
+    <div class="inner"></div>
+    <span class="cursor-label"></span>
+  </div>
+
+  <!-- Background blobs (same as index) -->
+  <div class="blob blob-3"></div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <a href="index.html" aria-label="Back to portfolio">
+          <div class="nav-logo-icon">
+            <img src="ui design/logo-vj.png" alt="VJ" class="nav-logo-img" />
+          </div>
+        </a>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html#work">Projects</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <a href="ui design/Vishnuraj_KJ_CV_2026.pdf" download="Vishnuraj_KJ_CV_2026.pdf" class="nav-resume-btn">
+          Resume
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+        </a>
+      </div>
+
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== DETAIL PAGE CONTENT (rendered by JS) ===================== -->
+  <main id="detail-root" class="detail-root">
+
+    <!-- Loading state -->
+    <div id="detail-loading" class="detail-loading" aria-live="polite">
+      <div class="detail-loading-inner">
+        <div class="detail-spinner"></div>
+        <p>Loading project…</p>
+      </div>
+    </div>
+
+    <!-- Error state — hidden by CSS until JS calls showError() -->
+    <div id="detail-error" class="detail-error">
+      <div class="container">
+        <p class="detail-error-code">404</p>
+        <h1 class="detail-error-title">Project not found</h1>
+        <p class="detail-error-sub">The project you're looking for doesn't exist or has been moved.</p>
+        <a href="index.html#work" class="btn-primary detail-back-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+          Back to Projects
+        </a>
+      </div>
+    </div>
+
+    <!-- Project content — hidden by CSS until JS calls showContent() -->
+    <div id="detail-content" style="display:none;">
+
+      <!-- Hero band -->
+      <section class="pd-hero">
+        <div class="container">
+
+          <!-- Breadcrumb -->
+          <nav class="pd-breadcrumb" aria-label="breadcrumb">
+            <a href="index.html" class="pd-bc-link">Home</a>
+            <span class="pd-bc-sep" aria-hidden="true">/</span>
+            <a href="index.html#work" class="pd-bc-link">Projects</a>
+            <span class="pd-bc-sep" aria-hidden="true">/</span>
+            <span class="pd-bc-current" id="pd-bc-title"></span>
+          </nav>
+
+          <!-- Title block -->
+          <div class="pd-hero-head">
+            <span class="pd-chip" id="pd-chip"></span>
+            <h1 class="pd-title" id="pd-title"></h1>
+            <p class="pd-subtitle" id="pd-subtitle"></p>
+          </div>
+
+          <!-- Meta pills -->
+          <div class="pd-meta-row" id="pd-meta-row">
+            <!-- Role, Duration, Platform — injected by JS -->
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Full-width project image -->
+      <section class="pd-image-section">
+        <div class="container">
+          <div class="pd-image-frame fade-in">
+            <img id="pd-hero-img" src="" alt="" class="pd-hero-img" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Overview + Process -->
+      <section class="pd-body">
+        <div class="container">
+          <div class="pd-body-grid">
+
+            <!-- Left: overview & tags -->
+            <div class="pd-overview-col fade-in">
+              <p class="pd-section-eyebrow">// overview</p>
+              <p class="pd-overview-text" id="pd-overview"></p>
+
+              <div class="pd-tags-group">
+                <p class="pd-section-eyebrow">// disciplines</p>
+                <div class="pd-tags" id="pd-tags"></div>
+              </div>
+            </div>
+
+            <!-- Right: design process -->
+            <div class="pd-process-col fade-in">
+              <p class="pd-section-eyebrow">// process</p>
+              <ol class="pd-process-list" id="pd-process-list"></ol>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA — Know More (Behance) + Back -->
+      <section class="pd-cta-section">
+        <div class="container">
+          <div class="pd-cta-inner fade-in">
+            <p class="pd-cta-label">Want the full case study?</p>
+            <h2 class="pd-cta-title">See it on Behance</h2>
+            <div class="pd-cta-actions">
+              <a id="pd-behance-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn-primary pd-know-more-btn">
+                Know More
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+              </a>
+              <a href="index.html#work" class="btn-secondary">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+                All Projects
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Next project navigation -->
+      <section class="pd-nav-section">
+        <div class="container">
+          <div class="pd-proj-nav" id="pd-proj-nav">
+            <!-- Injected by JS -->
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /#detail-content -->
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer id="contact" class="footer">
+    <div class="footer-dots"></div>
+    <div class="footer-inner">
+      <div class="footer-avatar-wrap">
+        <img src="ui design/Banner-bg.jpg" alt="Vishnuraj KJ" class="footer-avatar" />
+      </div>
+      <div class="footer-headline">
+        <span class="footer-hl-bold">got a product to build?&nbsp; a design to fix?</span>
+        <span class="footer-hl-italic">let's make something worth using.</span>
+      </div>
+      <p class="footer-sub">
+        Open to full-time roles, freelance projects,<br />
+        and thoughtful design conversations.
+      </p>
+      <a href="mailto:vishnurajkj001@gmail.com" class="footer-email">vishnurajkj001@gmail.com</a>
+      <nav class="footer-socials">
+        <a href="https://www.linkedin.com/in/vishnuraj-k-j-28051b1a0" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <span class="footer-social-sep">|</span>
+        <a href="https://behance.net/vishnurajkj" target="_blank" rel="noopener noreferrer">Behance</a>
+        <span class="footer-social-sep">|</span>
+        <a href="mailto:vishnurajkj001@gmail.com">Mail</a>
+      </nav>
+      <div class="footer-bar">
+        <p>&copy; Vishnuraj KJ 2026 ALL RIGHTS RESERVED</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <span class="btt-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="19" x2="12" y2="5"></line>
+              <polyline points="5 12 12 5 19 12"></polyline>
+          </svg>
+      </span>
+      <span class="btt-label">TOP</span>
+      <span class="btt-line"></span>
+  </button>
+
+  <!-- Page logic (data is embedded in project-detail.js) -->
+  <script src="project-detail.js"></script>
+</body>
+</html>
