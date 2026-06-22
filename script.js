@@ -378,7 +378,9 @@ function initHeroScrollAnimation() {
     if (!heroSection) return;
 
     // ── Element references (match current HTML) ──
+    const photoWrap     = heroSection.querySelector('.hero-photo-wrap');
     const photoFrame    = heroSection.querySelector('.hero-photo-frame');
+    const blobShape     = heroSection.querySelector('.hero-shape-blob');
 
     // Left column
     const greetingBlock = heroSection.querySelector('.hero-greeting-block');
@@ -395,6 +397,7 @@ function initHeroScrollAnimation() {
     // Every element JS will drive — used for animation strip + tick
     const allAnimated = [
         photoFrame,
+        blobShape,
         greetingBlock, availBadge, specList,
         ctaRow,
         descriptor,
@@ -416,7 +419,12 @@ function initHeroScrollAnimation() {
         allAnimated.forEach(function(el) {
             el.style.animation = 'none';
             el.style.opacity   = '1';
-            el.style.transform = 'none';
+            // Blob needs to keep its translate(-50%,-50%) base transform
+            if (el === blobShape) {
+                el.style.transform = 'translate(-50%, -50%) scale(1) rotate(0deg)';
+            } else {
+                el.style.transform = 'none';
+            }
         });
         scrollReady = true;
         tick();
@@ -446,6 +454,15 @@ function initHeroScrollAnimation() {
         if (photoFrame) {
             photoFrame.style.transform = `scale(${1 - ease * 0.08})`;
             photoFrame.style.opacity   = String(Math.max(0, 1 - ease * 0.95));
+        }
+
+        // ── CENTER: blob shape — scales up + rotates outward as photo fades ──
+        if (blobShape) {
+            const blobScale  = 1 + ease * 0.35;          // grows from 1 → 1.35
+            const blobRotate = ease * 30;                 // rotates 0 → 30deg
+            const blobOpacity = Math.max(0, 1 - ease * 1.1); // fades out slightly after photo
+            blobShape.style.transform = `translate(-50%, -50%) scale(${blobScale}) rotate(${blobRotate}deg)`;
+            blobShape.style.opacity   = String(blobOpacity);
         }
 
         // ── CENTER: CTA row slides down + fades (opposite of entrance) ──
