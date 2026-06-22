@@ -1837,6 +1837,13 @@ body::after {
     gap: 2rem;
 }
 
+/* 3-column grid for large screens */
+@media (min-width: 1200px) {
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 /* ---- Work Card ---- */
 .work-card {
     display: block;
