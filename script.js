@@ -2,6 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     initPageLoader();
     initCursor();
+    renderProjects();
     initInteractions();
     initScrollAnimations();
     initNavbarScroll();
@@ -9,6 +10,33 @@ document.addEventListener('DOMContentLoaded', function() {
     initHeroScrollAnimation();
     initTimelineProgress();
 });
+
+// ---- RENDER PROJECTS (Selected Work) ----
+// Builds work cards from the PROJECTS array in projects/data.js
+function renderProjects() {
+    var grid = document.getElementById('projects-grid');
+    if (!grid || typeof PROJECTS === 'undefined') return;
+
+    grid.innerHTML = PROJECTS.map(function(p) {
+        var tagsHTML = p.tags.map(function(tag) {
+            return '<span class="wc-tag">' + tag + '</span>';
+        }).join('');
+
+        return [
+            '<a href="project-detail.html?id=' + p.id + '" class="work-card">',
+            '  <div class="work-card-preview ' + p.color + '">',
+            '    <div class="wcp-label-chip">' + p.chip + '</div>',
+            '    <img src="' + p.image + '" alt="' + p.title + '" class="wcp-photo" />',
+            '  </div>',
+            '  <div class="work-card-info">',
+            '    <h3 class="work-card-title">' + p.title.toUpperCase() + '</h3>',
+            '    <p class="work-card-desc">' + p.desc + '</p>',
+            '    <div class="work-card-tags">' + tagsHTML + '</div>',
+            '  </div>',
+            '</a>'
+        ].join('\n');
+    }).join('\n');
+}
 
 // ---- CUSTOM CURSOR ----
 function initCursor() {
