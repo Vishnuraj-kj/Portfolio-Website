@@ -41,11 +41,15 @@ vishnu/
 
 ## Featured Projects
 
-- **Hotel Booking** — End-to-end UX case study (Hospitality · Travel)
+Listed in display order (matches `PROJECTS` array in `projects/data.js`):
+
 - **Ovia** — Health and wellness product design (Health · Wellness)
+- **Hotel Booking** — High-fidelity visual design iteration (Hospitality · Travel)
+- **Web 1920 — I** — Full-scale web UI design at 1920px (Web · UI Design)
 - **Pemmin Task** — Task management SaaS (Productivity · SaaS)
 - **SKS Website** — Corporate website redesign (Corporate · Branding)
-- **Web 1920 — I & II** — Full-scale web UI design series
+- **Web 1920 — II** — Interaction design & motion series (Web · UI Design)
+- **Hotel Booking — II** — End-to-end UX case study (Hospitality · Travel)
 
 ## Tech Stack
 
