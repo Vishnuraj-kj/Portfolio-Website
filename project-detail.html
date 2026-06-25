@@ -130,11 +130,11 @@
         </div>
       </section>
 
-      <!-- Full-width project image -->
-      <section class="pd-image-section">
+      <!-- Full-size image gallery -->
+      <section class="pd-gallery-section" id="pd-gallery-section">
         <div class="container">
-          <div class="pd-image-frame fade-in">
-            <img id="pd-hero-img" src="" alt="" class="pd-hero-img" />
+          <div class="pd-gallery" id="pd-gallery">
+            <!-- Injected by renderProject() in project-detail.js -->
           </div>
         </div>
       </section>
@@ -243,7 +243,9 @@
       <span class="btt-line"></span>
   </button>
 
-  <!-- Page logic (data is embedded in project-detail.js) -->
+  <!-- Shared project data -->
+  <script src="projects/data.js"></script>
+  <!-- Page logic -->
   <script src="project-detail.js"></script>
 </body>
 </html>

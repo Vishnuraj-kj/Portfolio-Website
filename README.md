@@ -29,7 +29,8 @@ vishnu/
 ├── project-detail.js       # Loads project data by URL ?id=
 ├── projects/
 │   ├── data.js             # Single source of truth for all project data
-│   └── *.jpg / *.png       # Project cover images
+│   ├── cover-images/       # Card thumbnail images (used on homepage grid)
+│   └── *.jpg / *.png       # Full-size project images (used on detail page)
 └── ui design/
     ├── logo-vj.png         # Site logo / favicon
     ├── Banner.png          # Hero photo
@@ -72,18 +73,26 @@ Then visit `http://localhost:8000`.
 
 ## Adding a New Project
 
-All project data lives in `projects/data.js`. Add a new entry to the `PROJECTS` array:
+All project data lives in `projects/data.js` — it is the **single source of truth** for both the homepage grid and the detail page. No HTML changes needed anywhere.
+
+**Step 1** — Drop your images into `projects/cover-images/` (card thumbnail) and `projects/` (full-size detail images).
+
+**Step 2** — Add a new entry to the `PROJECTS` array in `projects/data.js`:
 
 ```js
 {
-  id: 'your-project-id',       // used in URL: ?id=your-project-id
+  id: 'your-project-id',       // used in URL: project-detail.html?id=your-project-id
   title: 'Project Title',
   subtitle: 'Project Type',
   chip: 'Category · Domain',
-  image: 'projects/your-image.jpg',
+  image: 'projects/cover-images/your-thumb.jpg',  // card cover image
+  images: [                                        // full-size images for detail page
+    'projects/your-full-image-1.jpg',
+    'projects/your-full-image-2.jpg'
+  ],
   color: 'wcp-blue',           // wcp-blue | wcp-green | wcp-purple | wcp-orange | wcp-teal | wcp-pink
   tags: ['Tag1', 'Tag2'],
-  desc: 'Short description for the project card.',
+  desc: 'Short description shown on the project card.',
   overview: 'Longer overview shown on the detail page.',
   role: 'Your Role',
   duration: 'X Weeks',
@@ -95,7 +104,7 @@ All project data lives in `projects/data.js`. Add a new entry to the `PROJECTS` 
 }
 ```
 
-Then add the corresponding card in `index.html` inside the `.projects-grid` section.
+**Step 3** — Save the file. The homepage card and the detail page are both live automatically.
 
 ## Contact
 

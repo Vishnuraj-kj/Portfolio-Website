@@ -11,6 +11,9 @@ const PROJECTS = [
     subtitle: 'Case Study',
     chip: 'Hospitality · Travel',
     image: 'projects/cover-images/Hotelo_C.jpg',
+    images: [
+      'projects/Hotel Booking (Case study)  4.jpg.jpeg'
+    ],
     color: 'wcp-blue',
     tags: ['UI/UX', 'UX Research', 'Mobile', 'Case Study'],
     desc: 'End-to-end hotel booking experience — user research, journey mapping, information architecture, and high-fidelity UI design for a seamless travel booking flow.',
@@ -32,6 +35,9 @@ const PROJECTS = [
     subtitle: 'Product Design',
     chip: 'Health · Wellness',
     image: 'projects/cover-images/Ovia_C.png',
+    images: [
+      'projects/Ovia.jpg.jpeg'
+    ],
     color: 'wcp-green',
     tags: ['Product Design', 'UI/UX', 'Mobile', 'Health Tech'],
     desc: 'Health and wellness product design — intuitive onboarding, personalised dashboards, and a clean visual language that puts user wellbeing first.',
@@ -53,6 +59,9 @@ const PROJECTS = [
     subtitle: 'Task Management',
     chip: 'Productivity · SaaS',
     image: 'projects/cover-images/Pemmin_Task.png',
+    images: [
+      'projects/Pemmin_Task.jpg.jpeg'
+    ],
     color: 'wcp-purple',
     tags: ['Dashboard', 'UI/UX', 'SaaS', 'Productivity'],
     desc: 'Task and project management SaaS — designed for teams that need clarity. Clean dashboards, smart workflows, and a design system built for scale.',
@@ -74,6 +83,9 @@ const PROJECTS = [
     subtitle: 'Web Design',
     chip: 'Corporate · Branding',
     image: 'projects/cover-images/sks.png',
+    images: [
+      'projects/SKS WEBSITE JPEG(3 SLIDE).jpg.jpeg'
+    ],
     color: 'wcp-orange',
     tags: ['Web Design', 'Branding', 'UI/UX', 'Corporate'],
     desc: 'Corporate website redesign with a strong visual identity — modern layout system, brand-consistent design language, and conversion-optimised page structures.',
@@ -95,6 +107,9 @@ const PROJECTS = [
     subtitle: 'UI Design',
     chip: 'Web · UI Design',
     image: 'projects/cover-images/Music_App.png',
+    images: [
+      'projects/Web 1920  1.jpg.jpeg'
+    ],
     color: 'wcp-teal',
     tags: ['UI Design', 'Web', 'Responsive', 'Visual Design'],
     desc: 'Full-scale web UI design at 1920px — bold layout composition, strong visual hierarchy, and a refined design system for a modern digital experience.',
@@ -116,6 +131,9 @@ const PROJECTS = [
     subtitle: 'UI Design',
     chip: 'Web · UI Design',
     image: 'projects/cover-images/music_player_cover_431x242.jpg',
+    images: [
+      'projects/Web 1920  2.jpg.jpeg'
+    ],
     color: 'wcp-pink',
     tags: ['UI Design', 'Web', 'Interaction', 'Visual Design'],
     desc: 'Continuation of the Web 1920 series — deeper interaction design, refined motion principles, and a more sophisticated visual language for digital interfaces.',
@@ -137,6 +155,9 @@ const PROJECTS = [
     subtitle: 'Visual Design',
     chip: 'Hospitality · Travel',
     image: 'projects/cover-images/Hotel Booking (Case study) 4.png',
+    images: [
+      'projects/Hotel Booking (Case study) 4.png'
+    ],
     color: 'wcp-blue',
     tags: ['Visual Design', 'UI/UX', 'Responsive', 'Travel'],
     desc: 'High-fidelity visual design iteration for the hotel booking platform — refined UI components, updated colour system, and polished responsive layouts.',
