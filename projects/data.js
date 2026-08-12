@@ -78,8 +78,8 @@ const PROJECTS = [
     behanceUrl: 'https://behance.net/vishnurajkj'
   },
   {
-    id: 'pemmin',
-    title: 'Pemmin Task',
+    id: 'atco-business-solutions',
+    title: 'Atco business solutions',
     subtitle: 'Task Management',
     chip: 'Productivity · SaaS',
     image: 'projects/cover-images/Pemmin_Task.png',
@@ -124,55 +124,55 @@ const PROJECTS = [
       { phase: 'Delivery', detail: 'Pixel-perfect assets and developer-ready specs exported from Figma.' }
     ],
     behanceUrl: 'https://behance.net/vishnurajkj'
-  },
-  {
-    id: 'web-1920-v2',
-    title: 'Web 1920 — II',
-    subtitle: 'UI Design',
-    chip: 'Web · UI Design',
-    image: 'projects/cover-images/music_player_cover_431x242.jpg',
-    images: [
-      'projects/Web 1920  2.jpg.jpeg'
-    ],
-    color: 'wcp-pink',
-    tags: ['UI Design', 'Web', 'Interaction', 'Visual Design'],
-    desc: 'Continuation of the Web 1920 series — deeper interaction design, refined motion principles, and a more sophisticated visual language for digital interfaces.',
-    overview: 'The second chapter of the Web 1920 series pushes further into interaction design and motion. More complex component states, hover behaviours, and an evolved design language.',
-    role: 'UI/UX Designer',
-    duration: '3 Weeks',
-    platform: 'Web',
-    process: [
-      { phase: 'Design Review', detail: 'Iterated on feedback from Web 1920 — I to refine layout density and component reuse.' },
-      { phase: 'Interaction States', detail: 'Defined hover, focus, active, and disabled states for all interactive components.' },
-      { phase: 'Motion Principles', detail: 'Documented animation guidelines: duration, easing, and transition patterns.' },
-      { phase: 'Prototype', detail: 'High-fidelity interactive prototype in Figma for stakeholder review.' }
-    ],
-    behanceUrl: 'https://behance.net/vishnurajkj'
-  },
-  {
-    id: 'hotel-booking-2',
-    title: 'Hotel Booking — II',
-    subtitle: 'Case Study',
-    chip: 'Hospitality · Travel',
-    image: 'projects/cover-images/Hotel Booking (Case study) 4.png',
-    images: [
-      'projects/Hotel Booking (Case study)  4.jpg.jpeg'
-    ],
-    color: 'wcp-blue',
-    tags: ['UI/UX', 'UX Research', 'Mobile', 'Case Study'],
-    desc: 'End-to-end hotel booking experience — user research, journey mapping, information architecture, and high-fidelity UI design for a seamless travel booking flow.',
-    overview: 'A comprehensive UX case study redesigning the hotel booking experience from the ground up. Focused on reducing friction in the search-to-checkout flow while improving trust signals and visual clarity.',
-    role: 'Lead UI/UX Designer',
-    duration: '8 Weeks',
-    platform: 'Mobile & Web',
-    process: [
-      { phase: 'Research', detail: 'User interviews, competitor analysis, and journey mapping to identify pain points in existing booking flows.' },
-      { phase: 'Information Architecture', detail: 'Restructured navigation and content hierarchy to reduce cognitive load during the booking process.' },
-      { phase: 'Wireframing', detail: 'Low and mid-fidelity wireframes iterated through 3 rounds of usability testing.' },
-      { phase: 'Visual Design', detail: 'High-fidelity UI with a refined design system — typography, colour palette, and component library.' }
-    ],
-    behanceUrl: 'https://behance.net/vishnurajkj'
   }
+  // {
+  //   id: 'web-1920-v2',
+  //   title: 'Web 1920 — II',
+  //   subtitle: 'UI Design',
+  //   chip: 'Web · UI Design',
+  //   image: 'projects/cover-images/music_player_cover_431x242.jpg',
+  //   images: [
+  //     'projects/Web 1920  2.jpg.jpeg'
+  //   ],
+  //   color: 'wcp-pink',
+  //   tags: ['UI Design', 'Web', 'Interaction', 'Visual Design'],
+  //   desc: 'Continuation of the Web 1920 series — deeper interaction design, refined motion principles, and a more sophisticated visual language for digital interfaces.',
+  //   overview: 'The second chapter of the Web 1920 series pushes further into interaction design and motion. More complex component states, hover behaviours, and an evolved design language.',
+  //   role: 'UI/UX Designer',
+  //   duration: '3 Weeks',
+  //   platform: 'Web',
+  //   process: [
+  //     { phase: 'Design Review', detail: 'Iterated on feedback from Web 1920 — I to refine layout density and component reuse.' },
+  //     { phase: 'Interaction States', detail: 'Defined hover, focus, active, and disabled states for all interactive components.' },
+  //     { phase: 'Motion Principles', detail: 'Documented animation guidelines: duration, easing, and transition patterns.' },
+  //     { phase: 'Prototype', detail: 'High-fidelity interactive prototype in Figma for stakeholder review.' }
+  //   ],
+  //   behanceUrl: 'https://behance.net/vishnurajkj'
+  // },
+  // {
+  //   id: 'hotel-booking-2',
+  //   title: 'Hotel Booking — II',
+  //   subtitle: 'Case Study',
+  //   chip: 'Hospitality · Travel',
+  //   image: 'projects/cover-images/Hotel Booking (Case study) 4.png',
+  //   images: [
+  //     'projects/Hotel Booking (Case study)  4.jpg.jpeg'
+  //   ],
+  //   color: 'wcp-blue',
+  //   tags: ['UI/UX', 'UX Research', 'Mobile', 'Case Study'],
+  //   desc: 'End-to-end hotel booking experience — user research, journey mapping, information architecture, and high-fidelity UI design for a seamless travel booking flow.',
+  //   overview: 'A comprehensive UX case study redesigning the hotel booking experience from the ground up. Focused on reducing friction in the search-to-checkout flow while improving trust signals and visual clarity.',
+  //   role: 'Lead UI/UX Designer',
+  //   duration: '8 Weeks',
+  //   platform: 'Mobile & Web',
+  //   process: [
+  //     { phase: 'Research', detail: 'User interviews, competitor analysis, and journey mapping to identify pain points in existing booking flows.' },
+  //     { phase: 'Information Architecture', detail: 'Restructured navigation and content hierarchy to reduce cognitive load during the booking process.' },
+  //     { phase: 'Wireframing', detail: 'Low and mid-fidelity wireframes iterated through 3 rounds of usability testing.' },
+  //     { phase: 'Visual Design', detail: 'High-fidelity UI with a refined design system — typography, colour palette, and component library.' }
+  //   ],
+  //   behanceUrl: 'https://behance.net/vishnurajkj'
+  // }
 ];
 
 // Export for use in project-detail.js (script tag approach — no module bundler)
